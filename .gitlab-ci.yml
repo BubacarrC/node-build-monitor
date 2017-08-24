@@ -10,10 +10,14 @@ before_script:
 
 stages:
   - test
+  - deploy
 
 test_mocha:
   stage: test
   script:
   - npm install
   - npm run ci
-
+deploy_test:
+  stage: deploy
+  script: 
+    - echo "deploy"
